@@ -1,0 +1,22 @@
+fields:
+
+    quote:
+        label   : martin.quotes::lang.fields.item.quote
+        type    : textarea
+        size    : small
+        span    : left
+        required: true
+
+    author:
+        label   : martin.quotes::lang.fields.item.author
+        span    : left
+
+
+    link:
+        label   : martin.quotes::lang.fields.item.link
+        span    : left
+
+    image:
+        label   : martin.quotes::lang.fields.item.image
+        type    : mediafinder
+        mode    : image

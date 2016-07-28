@@ -1,0 +1,12 @@
+columns:
+    image:
+        label     : martin.quotes::lang.columns.item.image
+        type      : partial
+        path      : ~/plugins/martin/quotes/models/item/_image_column.htm
+        sortable  : false
+    quote:
+        label     : martin.quotes::lang.columns.item.quote
+        searchable: true
+    author:
+        label     : martin.quotes::lang.columns.item.author
+        searchable: true

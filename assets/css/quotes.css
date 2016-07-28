@@ -1,0 +1,21 @@
+#quote-carousel { margin-top:30px 0px 0px; padding:0 10px 30px 10px; }
+#quote-carousel .carousel-control { margin-top:30px; background:none; color:#222; font-size:2.3em; text-shadow:none; }
+#quote-carousel .carousel-control.left  { width:30px; height:40px; }
+#quote-carousel .carousel-control.right { width:30px; height:40px; }
+#quote-carousel .carousel-indicators { top:auto; right:50%; bottom:0px; margin-right:-19px; }
+#quote-carousel .carousel-indicators li { background:#c0c0c0; }
+#quote-carousel .carousel-indicators .active { background:#333; }
+#quote-carousel img { width:250px; height:100px }
+#quote-carousel .item blockquote { border-left:none; margin:0; }
+#quote-carousel .item blockquote img { margin-bottom:10px; }
+#quote-carousel .item blockquote p:before { float:left; margin-right:10px; content:"\f10d"; font-family:'Fontawesome'; }
+
+@media(min-width:768px) {
+    #quote-carousel { margin-top:30px; margin-bottom:0; padding:0 40px 30px 40px; }
+}
+
+@media (max-width:768px) {
+    #quote-carousel .carousel-indicators { bottom:-20px !important; }
+    #quote-carousel .carousel-indicators li { display:inline-block; width:15px; height:15px; margin:0px 5px; }
+    #quote-carousel .carousel-indicators li.active { width:20px; height:20px; margin:0px 5px; }
+}

@@ -1,0 +1,15 @@
+name           : martin.quotes::lang.controller.form.items.title
+form           : $/martin/quotes/models/item/fields.yaml
+modelClass     : Martin\Quotes\Models\Item
+defaultRedirect: martin/quotes/items
+create:
+    title        : martin.quotes::lang.controller.form.items.create
+    redirect     : martin/quotes/items/update/:id
+    redirectClose: martin/quotes/items
+    flashSave    : martin.quotes::lang.controller.form.items.flashCreate
+update:
+    title        : martin.quotes::lang.controller.form.items.update
+    redirect     : martin/quotes/items
+    redirectClose: martin/quotes/items
+    flashSave    : martin.quotes::lang.controller.form.items.flashUpdate
+    flashDelete  : martin.quotes::lang.controller.form.items.flashDelete
