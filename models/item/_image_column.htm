@@ -1,1 +1,3 @@
-<img src="/storage/app/media<?=$value ?>" alt="<?=$record->title?>" style="width:50px" />
+<?php if($value != ''): ?>
+<img src="/storage/app/media<?=$value ?>" alt="" style="width:50px" />
+<?php endif ?>
