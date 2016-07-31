@@ -2,11 +2,11 @@
 
     <div class='row'>
         <div class='col-md-offset-1 col-md-10'>
-            <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+            <div class="quote-carousel carousel slide" data-ride="carousel" id="quote-carousel-{{ __SELF__ }}">
 
                 <ol class="carousel-indicators">
                 {% for row in __SELF__.quotes %}
-                    <li data-target="#quote-carousel" data-slide-to="{{ loop.index0 }}" class="{{ (loop.first) ? 'active' : '' }}"></li>
+                    <li data-target="#quote-carousel-{{ __SELF__ }}" data-slide-to="{{ loop.index0 }}" class="{{ (loop.first) ? 'active' : '' }}"></li>
                 {% endfor %}
                 </ol>
 
@@ -36,8 +36,8 @@
                 {% endfor %}
                 </div>
 
-                <a data-slide="prev" href="#quote-carousel" class="left  carousel-control"><i class="fa fa-chevron-left"></i></a>
-                <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                <a data-slide="prev" href="#quote-carousel-{{ __SELF__ }}" class="left  carousel-control"><i class="fa fa-chevron-left"></i></a>
+                <a data-slide="next" href="#quote-carousel-{{ __SELF__ }}" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
 
             </div>
         </div>
@@ -47,7 +47,7 @@
 {% put scripts %}
     <script>
         $(document).ready(function() {
-            $('#quote-carousel').carousel({
+            $('#quote-carousel-{{ __SELF__ }}').carousel({
                 pause   : {{ (__SELF__.property('pause')) ? "'hover'" : "'null'" }},
                 interval: {{ __SELF__.property('interval') }},
             });
