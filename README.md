@@ -1,3 +1,7 @@
 # Quotes Carousel plugin for OctoberCMS
 
-Draws a Quotes Carousel on your page.
+##Introduction
+Draws a Quotes Carousel using Bootstrap 3 on your page.
+
+Based & inspired on:
+- Responsive Quote Carousel BS3: http://codepen.io/vegancore/pen/rHzmh
