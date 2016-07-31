@@ -24,6 +24,7 @@
                     'url'         => Backend::url('martin/quotes/items'),
                     'permissions' => ['martin.quotes.access_quotes'],
                     'icon'        => 'icon-quote-right',
+                    'iconSvg'     => 'plugins/martin/quotes/assets/imgs/icon.svg',
                     'order'       => 500,
                     'sideMenu' => [
                         'items' => [
