@@ -36,6 +36,14 @@
                 'showExternalParam' => false
             ];
 
+            $properties['random'] = [
+                'title'             => 'Random',
+                'description'       => 'Only one single random Quote',
+                'type'              => 'checkbox',
+                'default'           => false,
+                'showExternalParam' => false
+            ];
+
             $properties['jquery'] = [
                 'title'             => 'Load jQuery?',
                 'type'              => 'dropdown',
@@ -83,10 +91,14 @@
             }
 
             $this->addCss('/plugins/martin/quotes/assets/css/quotes.css');
+
+            if ($this->properties['random']) {
+                $this->quotes = array(Item::orderByRaw("RAND()")->get()->first());
+                return;
+            }
+
             $this->quotes = Item::orderBy('id', 'asc')->get();
-
         }
-
     }
 
 ?>
