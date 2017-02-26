@@ -1,3 +1,5 @@
 1.0.1:
     - First version of Quotes Carousel plugin
     - create_table.php
+1.0.2:
+    - New option to display single random quote

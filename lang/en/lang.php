@@ -58,8 +58,17 @@ return [
 
     'components' => [
         'quotes' => [
-            'name'        => 'Quotes Carousel',
-            'description' => 'Adds a Quotes Carousel in page.'
+            'name'            => 'Quotes Carousel',
+            'description'     => 'Adds a Quotes Carousel in page.',
+            'interval_title'  => 'Interval',
+            'interval_desc'   => 'Time to delay between cycling an item',
+            'pause_title'     => 'Pause',
+            'pause_desc'      => 'Pause on mouseover',
+            'random_title'    => 'Random',
+            'random_desc'     => 'Display just a single random quote',
+            'jquery_title'    => 'Load jQuery?',
+            'bootstrap_title' => 'Load Bootstrap?',
+            'fa_title'        => 'Load Font Awesome?',
         ],
     ]
 
