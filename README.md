@@ -1,9 +1,9 @@
-# Quotes Carousel plugin for OctoberCMS with random single quote
+# Quotes Carousel plugin for OctoberCMS
 
 ##Introduction
-Its a fork from skydiver/october-plugin-quotes Plugin that draws a Quotes Carousel using Bootstrap 3 on your page.
+Draws a Quotes Carousel using Bootstrap 3 on your page.
 
-Additional to that a "random" option is now in the component widget. With random checked there will only shown one single quote, randomly.
+Additional, it's possible to show one single randome quote.
 
 Based & inspired on:
 - Responsive Quote Carousel BS3: http://codepen.io/vegancore/pen/rHzmh
