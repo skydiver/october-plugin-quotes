@@ -2,10 +2,10 @@
 
     namespace Martin\Quotes\Components;
 
+    use Lang;
     use Cms\Classes\ComponentBase;
     use Cms\Classes\Page;
     use Martin\Quotes\Models\Item;
-    use Lang;
 
     class Quotes extends ComponentBase {
 
@@ -21,31 +21,31 @@
         public function defineProperties() {
 
             $properties['interval'] = [
-                'title'             => 'Interval',
-                'description'       => 'Time to delay between cycling an item',
+                'title'             => Lang::get('martin.quotes::lang.components.quotes.interval_title'),
+                'description'       => Lang::get('martin.quotes::lang.components.quotes.interval_desc'),
                 'type'              => 'string',
                 'default'           => 3000,
                 'showExternalParam' => false
             ];
 
             $properties['pause'] = [
-                'title'             => 'Pause',
-                'description'       => 'Pause on mouseover',
+                'title'             => Lang::get('martin.quotes::lang.components.quotes.pause_title'),
+                'description'       => Lang::get('martin.quotes::lang.components.quotes.pause_desc'),
                 'type'              => 'checkbox',
                 'default'           => true,
                 'showExternalParam' => false
             ];
 
             $properties['random'] = [
-                'title'             => 'Random',
-                'description'       => 'Only one single random Quote',
+                'title'             => Lang::get('martin.quotes::lang.components.quotes.random_title'),
+                'description'       => Lang::get('martin.quotes::lang.components.quotes.random_desc'),
                 'type'              => 'checkbox',
                 'default'           => false,
                 'showExternalParam' => false
             ];
 
             $properties['jquery'] = [
-                'title'             => 'Load jQuery?',
+                'title'             => Lang::get('martin.quotes::lang.components.quotes.jquery_title'),
                 'type'              => 'dropdown',
                 'default'           => 'maxcdn',
                 'placeholder'       => 'Select source',
@@ -54,7 +54,7 @@
             ];
 
             $properties['bootstrap'] = [
-                'title'             => 'Load Bootstrap?',
+                'title'             => Lang::get('martin.quotes::lang.components.quotes.bootstrap_title'),
                 'type'              => 'dropdown',
                 'default'           => 'maxcdn',
                 'placeholder'       => 'Select source',
@@ -63,7 +63,7 @@
             ];
 
             $properties['fa'] = [
-                'title'             => 'Load Font Awesome?',
+                'title'             => Lang::get('martin.quotes::lang.components.quotes.fa_title'),
                 'type'              => 'dropdown',
                 'default'           => 'maxcdn',
                 'placeholder'       => 'Select source',
@@ -92,12 +92,12 @@
 
             $this->addCss('/plugins/martin/quotes/assets/css/quotes.css');
 
-            if ($this->properties['random']) {
-                $this->quotes = array(Item::orderByRaw("RAND()")->get()->first());
-                return;
+            if($this->properties['random']) {
+                $this->quotes = Item::orderByRaw("RAND()")->get()->take(1);
+            } else {
+                $this->quotes = Item::orderBy('id', 'asc')->get();
             }
 
-            $this->quotes = Item::orderBy('id', 'asc')->get();
         }
     }
 
